@@ -1,0 +1,42 @@
+<section class="player">
+  <h1>Gerenciar músicas</h1>
+
+  <div>
+      <table>
+
+          <thead>
+              <tr>
+                  <th></th>
+                  <th>Nome</th>
+                  <th>Artista</th>
+                  <th class="actions">Ações</th>
+                  <th></th>
+                  
+                  
+              </tr>
+          </thead>
+
+          <tbody>
+
+              <% playlist.forEach((music)=> { %>
+                  <tr class="musics">
+                      <td><img src="<%= music.linkImage %>" alt="Imagem da musica"></td>
+                      <td>
+                          <%= music.name %>
+                      </td>
+                      <td>
+                          <%= music.artist %>
+                      </td>
+                      <td>
+                          <a id="edit" href="">Editar</a>
+                      </td>
+                      <td>
+                          <a id="remove" href="">Apagar</a>
+                      </td>
+                  </tr>
+                  <% }) %>
+          </tbody>
+
+      </table>
+  </div>
+</section>

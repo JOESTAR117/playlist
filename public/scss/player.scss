@@ -19,11 +19,18 @@ section,
     justify-content: center;
     flex-wrap: wrap;
 
-    img,
+    h2,p{
+      width: 100%;
+      text-align: center;
+      padding: 2rem 0 5rem 0;
+      font-size: 1.4em;
+    }
+
     #currentImg {
-      width: 25rem;
-      height: 25rem;
+      width: 23rem;
+      height: 23rem;
       border-radius: 50%;
+
     }
     h2,
     #currentName {
@@ -37,16 +44,18 @@ section,
     border-collapse: collapse;
     border-spacing: 0;
     width: 50rem;
+  }
 
-    th,
-    td {
-      padding: 1rem;
-      border-bottom: 1px solid $purple;
-      text-align: left;
+  table th,
+  td {
+    padding: 1rem;
+    border-bottom: 1px solid $purple;
+    text-align: left;
 
-      img {
-        width: 3rem;
-      }
-    }
+  }
+ 
+
+  img {
+    width: 3rem;
   }
 }

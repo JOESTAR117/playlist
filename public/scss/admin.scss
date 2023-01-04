@@ -1,0 +1,101 @@
+section.add {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  h1 {
+    width: 100%;
+    padding: 0 0 5rem 0;
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+
+    label {
+      margin: 0rem 1rem;
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.3rem 1rem 1rem 1rem;
+    font-size: 1.5em;
+    border: 2px solid $color-secundary;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.4s;
+
+    &:focus {
+      border-radius: 10px;
+      border-color: $purple;
+    }
+  }
+
+  button {
+    border: 2px solid $color-secundary;
+    width: 97%;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: transparent;
+    color: $purple;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $purple;
+      color: $bage;
+    }
+  }
+}
+
+section.player h1 {
+  margin-top: 3rem;
+  width: 100%;
+  padding: 0 0 5rem 0;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+}
+
+.actions {
+  position: relative;
+  left: 7%;
+}
+
+td a {
+  display: flex;
+  flex-direction: row;
+  padding: 0.6rem;
+  text-decoration: none;
+  color: $white;
+  justify-content: space-around;
+  border: 1px solid $purple;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+#edit:hover {
+  background-color: $bage;
+  border-color: $black;
+  color: $black;
+}
+
+
+td a#remove:hover {
+  border-color: $black;
+  background-color: red;
+}
