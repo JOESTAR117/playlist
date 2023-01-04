@@ -43,14 +43,61 @@ section#modal {
             }
 
         }
-        hr{
+
+        hr {
             width: 90%;
             margin: 0 auto;
         }
 
+        p {
+            text-align: center;
+            padding: 2rem 0;
+            color: $white;
+            font-size: 1.4rem;
+        }
+
+        #btn-confirm {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 2rem;
+            margin: 10px;
+
+            a {
+                width: 100px;
+                display: flex;
+                flex-direction: row;
+                padding: 0.7rem;
+                margin: 0 3em;
+                text-decoration: none;
+                background-color: $purple;
+                color: $white;
+                justify-content: space-around;
+                border: 1px solid $purple;
+                border-radius: 5px;
+                transition: all 0.4s;
+
+
+            }
+
+            #no:hover {
+                border-color: black;
+                background-color: $bage;
+                color: $black;
+            }
+
+            #yes:hover {
+                background-color: rgb(129, 14, 14);
+                border-color: black;
+
+            }
+        }
+
     }
-    #form-modal{
+
+    #form-modal {
         width: 100%;
         padding: 2rem 0;
     }
+
 }

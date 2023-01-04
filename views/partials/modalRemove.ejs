@@ -1,0 +1,14 @@
+<% if (musicDel !=null){ %>
+    <section id="modal">
+        <div id="card">
+            <a id="close-modal" href="/admin"><i class="bi bi-x-lg"></i></a>
+            <h2>Confirmação</h2>
+            <hr />
+            <p>Deseja realmente excluir <%= musicDel.name %> ?</p>
+            <div id="btn-confirm">
+                <a id="no" href="/admin">Não</a>
+                <a id="yes" href="/delete/<%= musicDel._id %>">Sim</a>
+            </div>
+        </div>
+    </section>
+    <% } %>

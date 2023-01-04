@@ -20,10 +20,10 @@
           <td><%= music.name %></td>
           <td><%= music.artist %></td>
           <td>
-            <a id="edit" href="/by/<%= music._id%> ">Editar</a>
+            <a id="edit" href="/by/<%= music._id%>/edit ">Editar</a>
           </td>
           <td id="actions">
-            <a id="remove" href="">Apagar</a>
+            <a id="remove" href="/by/<%= music._id%>/delete">Apagar</a>
           </td>
         </tr>
         <% }) %>
