@@ -1,0 +1,25 @@
+<% if (music != null){ %>
+<section id="modal">
+  <div id="card">
+    <a id="close-modal" href="/admin"><i class="bi bi-x-lg"></i></a>
+    <h2>Editar <strong><%= music.name %></strong></h2>
+    <hr />
+
+    <form id="form-modal" method="post" action="/uptade/<%= music._id %>" >
+      <label for="name">Nome:</label>
+      <input type="text" name="name" id="name" value="<%= music.name %>" required />
+
+      <label for="artist">Artista:</label>
+      <input type="text" name="artist" id="artist" value="<%= music.artist %>"required />
+
+      <label for="linkImage">Link da image</label>
+      <input type="text" name="linkImage" id="linkImage" value="<%= music.linkImage %>"required />
+
+      <label for="linkMusic">Link da musica</label>
+      <input type="text" name="linkMusic" id="linkMusic" value="<%= music.linkMusic %>" required/>
+
+      <button type="submit">Atualizar</button>
+    </form>
+  </div>
+</section>
+<% } %>

@@ -13,52 +13,53 @@ section.add {
     text-align: center;
   }
 
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
+  
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
 
-    label {
-      margin: 0rem 1rem;
-      font-size: 1.3rem;
-      font-weight: 300;
-    }
+  label {
+    margin: 0rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 300;
   }
+}
 
-  input {
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.3rem 1rem 1rem 1rem;
-    font-size: 1.5em;
-    border: 2px solid $color-secundary;
-    border-radius: 5px;
-    outline: none;
-    transition: all 0.4s;
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.3rem 1rem 1rem 1rem;
+  font-size: 1.5em;
+  border: 2px solid $color-secundary;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.4s;
 
-    &:focus {
-      border-radius: 10px;
-      border-color: $purple;
-    }
+  &:focus {
+    border-radius: 10px;
+    border-color: $purple;
   }
+}
 
-  button {
-    border: 2px solid $color-secundary;
-    width: 97%;
-    padding: 0.6rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    background-color: transparent;
-    color: $purple;
-    cursor: pointer;
+button {
+  border: 2px solid $color-secundary;
+  width: 97%;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: transparent;
+  color: $purple;
+  cursor: pointer;
 
-    &:hover {
-      background-color: $purple;
-      color: $bage;
-    }
+  &:hover {
+    background-color: $purple;
+    color: $bage;
   }
 }
 
