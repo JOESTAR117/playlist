@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <%- include('./head') %>
+
   <body>
     <h1>Hello EJS</h1>
 
     <a href="/admin">Administração</a>
+
+    <% playlist.forEach((music)=> { %>
+
+    <section>
+      <h2><%= music.name%></h2>
+      <p><%= music.artist%></p>
+      <img src="<%= music.linkImage%>" alt="Imagem da musica" />
+      <audio controls src="<%= music.linkMusic%>"></audio>
+    </section>
+
+    <% }) %>
   </body>
 </html>
