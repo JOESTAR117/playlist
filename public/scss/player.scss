@@ -1,0 +1,52 @@
+section,
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 10rem;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 5rem 0;
+    font-size: 3em;
+    font-weight: 100;
+  }
+
+  figure {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img,
+    #currentImg {
+      width: 25rem;
+      height: 25rem;
+      border-radius: 50%;
+    }
+    h2,
+    #currentName {
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0 0.5rem 0;
+      font-size: 2em;
+    }
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50rem;
+
+    th,
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid $purple;
+      text-align: left;
+
+      img {
+        width: 3rem;
+      }
+    }
+  }
+}

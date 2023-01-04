@@ -1,0 +1,17 @@
+nav{
+    ul{
+        padding: 1rem;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        li i {
+            font-size: 1.4em;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $white;
+        font-weight: 600;
+    }
+}
