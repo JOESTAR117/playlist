@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+  section.player {
+    width: 100%;
+    height: 100%;
+
+    table {
+      width: 100%;
+
+      td {
+        height: 100%;
+      }
+    }
+  }
+
+  section#controls {
+    #vol-icon {
+      display: none;
+    }
+
+    #volume {
+      display: none;
+    }
+  }
+  form {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 608px) {
+  section#controls {
+    width: 100%;
+    height: 14%;
+  }
+}
+
+@media (max-width: 430px) {
+  table,
+  td {
+    font-size: 0.8em;
+  }
+  section#controls {
+    display: flex;
+    width: 100%;
+
+    #current-duration {
+      display: none;
+    }
+    #progressbar {
+      width: 100%;
+    }
+  }
+}

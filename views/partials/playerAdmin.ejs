@@ -8,8 +8,7 @@
           <th></th>
           <th>Nome</th>
           <th>Artista</th>
-          <th class="actions">Ações</th>
-          <th></th>
+          <th>Ações</th>
         </tr>
       </thead>
 
@@ -19,10 +18,9 @@
           <td><img src="<%= music.linkImage %>" alt="Imagem da musica" /></td>
           <td><%= music.name %></td>
           <td><%= music.artist %></td>
-          <td>
+       
+            <td id="actions">
             <a id="edit" href="/by/<%= music._id%>/edit ">Editar</a>
-          </td>
-          <td id="actions">
             <a id="remove" href="/by/<%= music._id%>/delete">Apagar</a>
           </td>
         </tr>
