@@ -1,5 +1,5 @@
 const controls = document.querySelector("#controls");
-const btnPlay = document.querySelector('#play-control')
+const btnPlay = document.querySelector("#play-control");
 let index = 0;
 let currentMusic = 0;
 let isPlaying = false;
@@ -7,8 +7,6 @@ let isPlaying = false;
 controls.addEventListener("click", function (event) {
   const audios = [];
   let music = {};
-
-
 
   if (event.target.id != "controls") {
     const musics =
@@ -39,32 +37,50 @@ controls.addEventListener("click", function (event) {
     const textTotalDuration = document.querySelector("#total-duration");
 
     progressbar.max = currentMusic.audio.duration;
-    textTotalDuration.innerText = secondsToMinute(currentMusic.audio.duration);
-    textCurrentDuration.innerText = secondsToMinute(currentMusic.audio.currentTime);
+    textTotalDuration.innerText = secondsToMinutes(currentMusic.audio.duration);
 
-    progressbar.valueAsNumber = currentMusic.audio.currentTime ;
-    
+    currentMusic.audio.ontimeupdate = function () {
+      textCurrentDuration.innerText = secondsToMinutes(
+        currentMusic.audio.currentTime
+      );
+      progressbar.valueAsNumber = currentMusic.audio.currentTime;
+    };
   }
-  if(event.target.id == "play-control"){
-    if (index === 0){
-        updateDataMusic();
+  if (event.target.id == "play-control") {
+    if (index === 0) {
+      updateDataMusic();
     }
 
-    if (!isPlaying){
-        btnPlay.classList.replace("bi-play-fill","bi-pause-fill")
-        currentMusic.audio.play()
-        isPlaying = true;
-
-    } else{
-        btnPlay.classList.replace("bi-pause-fill","bi-play-fill")
-        currentMusic.audio.pause()
-        isPlaying = false;
+    if (!isPlaying) {
+      btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
+      currentMusic.audio.play();
+      isPlaying = true;
+    } else {
+      btnPlay.classList.replace("bi-pause-fill", "bi-play-fill");
+      currentMusic.audio.pause();
+      isPlaying = false;
     }
   }
+  if (event.target.id == "vol-icon") {
+    currentMusic.audio.muted = !currentMusic.audio.muted
+    if(currentMusic.audio.muted){
+      event.target.classList.replace("bi-volume-up-fill","bi-volume-mute-fill")
+    } else {
+      event.target.classList.replace("bi-volume-mute-fill",
+      "bi-volume-up-fill"
+      )
+    }
+  }
+  if (event.target.id == "volume") {
+    currentMusic.audio.volume = event.target.valueAsNumber / 100;
+  }
 
+  if (event.target.id == "progressbar") {
+    currentMusic.audio.currentTime = event.target.valueAsNumber;
+  }
 });
 
-function secondsToMinute(time) {
+function secondsToMinutes(time) {
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);
   return `${("0" + minutes).slice(-2)}:${("0" + seconds).slice(-2)}`;
