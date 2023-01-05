@@ -13,5 +13,14 @@ nav{
         text-decoration: none;
         color: $white;
         font-weight: 600;
+
+        img.icon{
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            background-color: red;
+
+        }
     }
 }

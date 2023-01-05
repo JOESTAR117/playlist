@@ -7,6 +7,7 @@ section,
   padding-bottom: 10rem;
 
   .title {
+    font-family: 'jojo' !important;
     width: 100%;
     text-align: center;
     padding: 0 0 5rem 0;
@@ -30,12 +31,15 @@ section,
       font-size: 1.4em;
     }
 
+    @keyframes disco {
+      to{transform:rotate(360deg)} ;
+    }
     #currentImg {
       width: 300px;
       height: 300px;
       border-radius: 50%;
-
-
+      animation: disco 8s linear infinite;
+      
     }
 
     h2,
