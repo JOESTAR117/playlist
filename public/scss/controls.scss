@@ -1,0 +1,36 @@
+section#controls {
+  background-color: $color-primary;
+  padding: 1.7rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: #ffffff10;
+      border-radius: 3rem;
+    }
+  }
+  #progressbar {
+    width: 60%;
+  }
+  #vol-icon {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+  #volume {
+    width: 10%;
+  }
+
+  span{
+    padding: 1rem;
+  }
+}

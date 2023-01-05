@@ -6,11 +6,11 @@ section,
   flex-wrap: wrap;
   padding-bottom: 10rem;
 
-  h1 {
+  .title {
     width: 100%;
     text-align: center;
     padding: 0 0 5rem 0;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 100;
   }
 
@@ -19,7 +19,8 @@ section,
     justify-content: center;
     flex-wrap: wrap;
 
-    h2,p{
+    h2,
+    p {
       width: 100%;
       text-align: center;
       padding: 2rem 0 5rem 0;
@@ -29,9 +30,9 @@ section,
     #currentImg {
       width: 23rem;
       height: 23rem;
-      border-radius: 50%;
 
     }
+
     h2,
     #currentName {
       width: 100%;
@@ -40,6 +41,7 @@ section,
       font-size: 2em;
     }
   }
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -53,7 +55,7 @@ section,
     text-align: left;
 
   }
- 
+
 
   img {
     width: 3rem;
