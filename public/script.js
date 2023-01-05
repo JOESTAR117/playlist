@@ -62,13 +62,17 @@ controls.addEventListener("click", function (event) {
     }
   }
   if (event.target.id == "vol-icon") {
-    currentMusic.audio.muted = !currentMusic.audio.muted
-    if(currentMusic.audio.muted){
-      event.target.classList.replace("bi-volume-up-fill","bi-volume-mute-fill")
+    currentMusic.audio.muted = !currentMusic.audio.muted;
+    if (currentMusic.audio.muted) {
+      event.target.classList.replace(
+        "bi-volume-up-fill",
+        "bi-volume-mute-fill"
+      );
     } else {
-      event.target.classList.replace("bi-volume-mute-fill",
-      "bi-volume-up-fill"
-      )
+      event.target.classList.replace(
+        "bi-volume-mute-fill",
+        "bi-volume-up-fill"
+      );
     }
   }
   if (event.target.id == "volume") {
@@ -77,6 +81,29 @@ controls.addEventListener("click", function (event) {
 
   if (event.target.id == "progressbar") {
     currentMusic.audio.currentTime = event.target.valueAsNumber;
+  }
+
+  if (event.target.id == "next-control") {
+    index++;
+
+    if (index == audios.length) {
+      index = 0;
+    }
+    currentMusic.audio.pause();
+    updateDataMusic();
+    currentMusic.audio.play();
+    btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
+  }
+  if (event.target.id == "prev-control") {
+    index--;
+
+    if (index == -1) {
+      index = audios.length -1
+    }
+    currentMusic.audio.pause();
+    updateDataMusic();
+    currentMusic.audio.play();
+    btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
   }
 });
 

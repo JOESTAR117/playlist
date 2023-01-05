@@ -1,37 +1,33 @@
 <section class="player">
-    <h1 class="title">Playlist Jackson</h1>
-    <figure>
-      <img id="currentImg" src="/img/musicoff.jpg" alt="imagem do player" />
-      <h2 id="currentName">Titulo</h2>
-      <p id="currentArtist">Artista</p>
-    </figure>
-    <section>
-      <table>
-        <thead>
-          <th></th>
-          <th>Nome</th>
-          <th>Artista</th>
+  <h1 class="title">Playlist Jackson</h1>
+  <figure>
+    <img id="currentImg" src="/img/musicoff.jpg" alt="imagem do player" />
+    <h2 id="currentName">Titulo</h2>
+    <p id="currentArtist">Artista</p>
+  </figure>
+  <section>
+    <table>
+      <thead>
         <th></th>
-        </thead>
+        <th>Nome</th>
+        <th>Artista</th>
+        <th></th>
+      </thead>
 
-        <tbody>
-          <% playlist.forEach((music)=> { %>
-          <tr class="musics">
-            <td>
-              <img src="<%= music.linkImage %>" alt="Imagem da musica" />
-            </td>
-            <td><%= music.name %></td>
-            <td><%= music.artist %></td>
-            <td>
-              <audio
-                
-                class="audio"
-                src="<%= music.linkMusic %>"
-              ></audio>
-            </td>
-          </tr>
-          <% }) %>
-        </tbody>
-      </table>
-    </section>
+      <tbody>
+        <% playlist.forEach((music)=> { %>
+        <tr class="musics">
+          <td>
+            <img src="<%= music.linkImage %>" alt="Imagem da musica" />
+          </td>
+          <td><%= music.name %></td>
+          <td><%= music.artist %></td>
+          <td>
+            <audio class="audio" src="<%= music.linkMusic %>"></audio>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
   </section>
+</section>
