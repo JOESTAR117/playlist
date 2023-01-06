@@ -1,7 +1,7 @@
 const controls = document.querySelector("#controls");
 const btnPlay = document.querySelector("#play-control");
 let index = 0;
-let currentMusic = 0;
+let currentMusic;
 let isPlaying = false;
 
 controls.addEventListener("click", function (event) {
@@ -46,6 +46,7 @@ controls.addEventListener("click", function (event) {
       progressbar.valueAsNumber = currentMusic.audio.currentTime;
     };
   }
+
   if (event.target.id == "play-control") {
     if (index === 0) {
       updateDataMusic();
@@ -60,8 +61,8 @@ controls.addEventListener("click", function (event) {
       currentMusic.audio.pause();
       isPlaying = false;
     }
-    musicEnded();
   }
+
   if (event.target.id == "vol-icon") {
     currentMusic.audio.muted = !currentMusic.audio.muted;
     if (currentMusic.audio.muted) {
@@ -75,8 +76,9 @@ controls.addEventListener("click", function (event) {
         "bi-volume-up-fill"
       );
     }
-    musicEnded();
+
   }
+
   if (event.target.id == "volume") {
     currentMusic.audio.volume = event.target.valueAsNumber / 100;
     musicEnded();
@@ -93,30 +95,36 @@ controls.addEventListener("click", function (event) {
     if (index == audios.length) {
       index = 0;
     }
+
     currentMusic.audio.pause();
     updateDataMusic();
     currentMusic.audio.play();
     btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
     musicEnded();
   }
+
   if (event.target.id == "prev-control") {
     index--;
 
     if (index == -1) {
       index = audios.length - 1;
     }
+
     currentMusic.audio.pause();
     updateDataMusic();
     currentMusic.audio.play();
     btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
     musicEnded();
   }
+
   function musicEnded() {
     currentMusic.audio.addEventListener("ended", function () {
       index++;
-      if (index === audios.length) {
+
+      if (index == audios.length) {
         index = 0;
       }
+
       currentMusic.audio.pause();
       updateDataMusic();
       currentMusic.audio.play();
